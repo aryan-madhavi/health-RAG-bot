@@ -71,7 +71,7 @@ with open("all_disease_links.txt", "r") as file:
                         sections.append(cleaned)
 
                 # Step 4: Write everything to output file
-                filepath = os.path.join(output_dir, f"{disease_name}.md")
+                filepath = os.path.join(output_dir, f"{disease_name}.txt")
                 with open(filepath, "w", encoding="utf-8") as f:
                     f.write(url + "\n\n")
                     f.write("\n\n".join(sections))
