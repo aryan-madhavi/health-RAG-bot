@@ -1,0 +1,25 @@
+{
+  "selected": true,
+  "id": "en",
+  "url": "/diseases/bipolar-disorder-529",
+  "displayText": "English",
+  "symptoms": [],
+  "toc": [
+    { "value": "Overview", "key": "overview" },
+    { "value": "Key Facts", "key": "fact_box" },
+    { "value": "Symptoms", "key": "symptoms" },
+    { "value": "Types", "key": "types" },
+    { "value": "Causes", "key": "causes" },
+    { "value": "Risk factors", "key": "risk_factors" },
+    { "value": "Diagnosis", "key": "diagnosis" },
+    { "value": "Celebs affected", "key": "celebs_affected" },
+    { "value": "Prevention", "key": "prevention" },
+    { "value": "Specialist to visit", "key": "specialist_to_visit" },
+    { "value": "Treatment", "key": "treatment" },
+    { "value": "Complications", "key": "complications" },
+    { "value": "Alternatives therapies", "key": "alternatives_therapies" },
+    { "value": "Living with", "key": "living_with" },
+    { "value": "FAQs", "key": "faqs" },
+    { "value": "References", "key": "references" }
+  ]
+}

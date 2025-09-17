@@ -1,0 +1,300 @@
+
+<center><a href="https://www.1mg.com/diseases/acne-261#"> Source </a></center>
+
+---
+
+## ACNE
+###### Also known as Acne vulgaris, and Pimples
+
+---
+
+## OVERVIEW
+
+Acne is a common condition that most of us have dealt with at some point in our lives. Acne, or acne vulgaris, is a skin condition in which the pores and hair follicles of the skin get clogged with sebum, an oily, wax-textured substance secreted from the skin glands. Though the face is the most commonly affected area, acne can occur anywhere on the body, like the chest, shoulders, and upper back.
+
+Acne is mainly of two types, comedogenic and non-comedogenic. Comedogenic acne is mainly non-inflammatory and can be seen in the form of whiteheads and blackheads. On the other hand, non-comedogenic acne is inflammatory and may be red, pus-filled, and painful.
+
+The treatment of acne comprises topical, systemic, and lifestyle remedies. Topical remedies include prescribed ointments or cleansers. Systemic therapy consists of antibiotics or hormonal preparations to keep acne at bay. Lifestyle changes for acne majorly include a clean diet, better hydration, and regular exercise. Timely treatment of acne can greatly help prevent acne scars in the future.
+
+---
+
+## KEY FACTS
+- **Usually seen in**
+  - Children between 13 to 18 years of age  
+  - Adults between 25 to 40 years of age
+- **Gender affected**
+  - Both men and women, but more common in women
+- **Body part(s) involved**
+  - Skin
+- **Prevalence**
+  - Worldwide: 9.4% (2015)
+- **Mimicking Conditions**
+  - Acne keloidalis nuchae  
+  - Acneiform eruptions  
+  - Folliculitis  
+  - Perioral dermatitis  
+  - Rosacea  
+  - Sebaceous hyperplasia  
+  - Syringoma  
+  - Tuberous sclerosis  
+  - Hidradenitis suppurativa
+- **Necessary health tests/imaging**
+  - Luteinising Hormone (LH)  
+  - Follicle Stimulating Hormone (FSH)  
+  - Dehydroepiandrosterone (DHEA)
+- **Treatment**
+  - **Retinoids:** Retinoic acid, Tretinoin, Adapalene  
+  - **Antimicrobials:** Azelaic acid  
+  - **Topical antibiotics:** Clindamycin, Azithromycin  
+  - **Anti-acne agents:** Salicylic acid  
+  - **Systemic antibiotics:** Doxycycline, Minocycline  
+  - **Oral Isotretinoin**
+- **Specialists to consult**
+  - General physician  
+  - Skin & hair specialist  
+  - Gynecologist
+
+---
+
+## SYMPTOMS OF ACNE
+
+Acne, also known as acne vulgaris, is a recurrent skin condition. In this, the pores and hair follicles of the skin get clogged with sebum. Acne can be seen in the form of pimples, blackheads or comedones, or nodes of the skin. 
+
+Following are the symptoms of acne:
+- Reddened and painful skin around the acne spots
+- Skin that may become darker or scarred over time
+- Fever and joint pain may occur in rare but severe cases of acne
+
+Some symptoms based on the type of acne are:
+
+1. **Comedogenic acne (Non-inflammatory acne)**
+    - **Closed comedones (whiteheads):** These are small round lesions that contain whitish material (sebum and dead skin cells).
+    - **Open comedones (blackheads):** These small round lesions appear as bumpy dark spots.
+    <br>
+
+2. **Non-comedogenic acne (Inflammatory acne)**
+    - This acne appears as a red and painful area on the skin.
+    - They are small, reddish bumps that may or may not be filled with pus developed from comedones.
+
+Furthermore, this inflammatory acne can be presented in various forms. The most common ones include:
+  - **Papules:** These are small painful bumps like eruptions on the skin.
+  - **Pustules:** These pimples have pus collected in them and are red in color.
+  - **Nodules:** These are large, painful, solid pimples that are deep in the skin.
+  - **Cysts:** These deep, painful, pus-filled pimples can cause scars.
+
+In some cases, a person may also suffer from a severe form of acne known as nodulocystic acne. In this, knots are formed on the skin that are hardened masses, larger than 5 mm, and usually present in the area of the back and neck.
+
+---
+
+## CAUSES OF ACNE
+
+The common causes of acne are:
+
+1. **HORMONAL CONDITIONS**
+    Androgens are hormones that increase in boys and girls during puberty and cause the sebaceous glands to enlarge and make more sebum. Hormone changes during midlife, particularly in women, like PCOS and pregnancy, can also lead to acne breakouts. The menstrual cycle is one of the prime causes of hormonal acne seen in women.
+    <br>
+
+2. **GENETIC FACTORS**
+    The genes may be somewhat responsible for the development, course, and severity of acne. Although acne is not the result of a single gene but a series of different genes.
+    <br>
+
+3. **ENVIRONMENTAL FACTORS**
+    Environmental factors, such as sunlight, can worsen acne, along with skin aging. Also, climatic conditions, such as humid weather, can aggravate acne problems in certain individuals due to the overstimulation of sebaceous glands.
+    <br>
+
+4. **LIFESTYLE FACTORS**
+    Certain food products, such as dairy, products made from dairy, and sugary foods, can cause acne. Also, stress and increased weight are two major causes of acne in many individuals.
+    <br>
+
+5. **HEALTH CONDITIONS**
+    Certain metabolic diseases, such as diabetes, may cause acne in some individuals. Also, the use of some medications, such as lithium, corticosteroids, or testosterone-containing tablets and creams can result in acne.
+    <br>
+
+6. **CHEMICALS/PRODUCTS**
+    The application of perfumed products, such as cosmetics, hair products, and soaps, can result in acne in some individuals. Irritation of the affected skin area by either scratching, pulling, pressing, or wearing tight garments, such as headbands or scarves around the face and neck, can also cause acne.
+
+---
+
+## RISK FACTORS FOR ACNE
+
+Almost everyone is at risk of developing acne at some point in their lives. Below mentioned are some of the common risk factors for acne:
+
+- **Age:** People of all ages can get acne, but it's most common in teenagers.
+- **Hormonal changes:** The changes in hormones, which are common during puberty or pregnancy, can increase the risk of acne.
+- **Family history:** Genetics plays a role in acne. If both of your parents or any of your immediate family members had acne, you're likely to develop it too.
+- **Greasy or oily substances:** You may develop acne when your skin comes into contact with oil or oily lotions and creams.Food:Studies indicate that consuming certain foods, including carbohydrate-rich foods, such as bread, bagels, and chips, may worsen acne.
+- **Friction or pressure on your skin:** This can be caused by items such as telephones, cellphones, helmets, tight collars, and backpacks.
+- **Stress:** It doesn't cause acne, but if you have acne already, stress may worsen it.
+
+---
+
+## DIAGNOSIS OF ACNE
+
+If you are suffering from acne, your dermatologist will diagnose you by looking at them. They may notice the type of acne and where the breakouts appear on the face or other parts of the body. This helps them create an effective treatment plan for you.
+
+Women of childbearing age, who are suffering from acne, should go for tests that are done after a history of dysmenorrhea or hirsutism is taken, such as:
+- Testosterone total test
+- LH test
+- FSH test
+- DHEA test
+
+---
+
+## PREVENTION OF ACNE
+
+Acne may seem like a non-serious issue but can affect an individual's confidence and lead to self-consciousness, anxiety, depression, and lower self-esteem. If you suffer from acne frequently, here are some of the preventive tips to avoid acne breakouts:
+
+**Wash your face after sweating:** If you sweat after going out or wearing a hat or helmet, it can worsen your acne. Hence, it is advised to wash your skin as soon as possible after sweating.
+
+**Stay away from irritating scrubs:** It is advised to use your fingertips to apply a gentle, non-abrasive cleanser, rather than using a mesh sponge or an abrasive cloth that can irritate the skin.
+
+**Be kind to your skin:** It is advised to use gentle products, which are alcohol-free. Products like astringents, scrubs, and exfoliants may irritate your skin and therefore, should not be used if you suffer from acne.
+
+**Use lukewarm water to clean your face:** It is advised to rinse your face with lukewarm water after face wash. Avoid too cold or hot water if you have acne.
+
+**Shampoo regularly:** If you have oily hair, it could be the reason for acne on your forehead; therefore, it is advised to shampoo daily to get rid of the excess oil.
+
+**Let your skin heal the natural way:** Do not pop, pick, or squeeze your acne. This would not only worsen your acne problem but your skin will also take longer to heal. This also increases the risk of scarring.
+
+**Stop touching your face:** Your hands carry germs, which transfer to your face when you touch it, and can cause flare-ups.
+
+**Be careful of sun and tanning:** Sun is not your best friend, especially when it comes to skin conditions. Tanning damages your skin and certain acne medications make the skin quite sensitive to ultraviolet (UV) light.
+<br>
+
+#### DIET & ACNE
+Certain foods are known to promote inflammation in the body, thereby resulting in acne outbreaks. In addition to that, diet can also affect hormone levels, making your acne worse. Following food items can cause acne breakouts:
+- Foods that are high in fat content, for example, milk and meat
+- Foods and beverages with a high sugar content lead to high insulin levels, altering other hormones that can cause acne
+- Fast foods and snacks
+
+In some patients, chocolate consumption was related to past or current acne. Therefore, it is advised to eat healthily and stay away from foods that could trigger your acne. Consult your dermatologist or a nutritionist to know what foods to avoid in order to achieve better and clear skin.
+
+While the exact cause of acne is not known, the appearance and recurrence can be lowered by making simple lifestyle changes. One of these changes includes adding foods to your diet that help in fighting acne.
+
+---
+
+## SPECIALISTS TO CONSULT
+
+Acne that is recurrent, pus-filled, and painful should only be treated under expert medical supervision, as they may have the tendency to leave deep scars. Visit a skin specialist who can best evaluate your condition and rule out the correct treatment for your acne. If you are suffering from acne, it is best to consult:
+- General physician
+- Skin & hair specialist
+
+Acne can be a painful and recurring condition that can deeply impact your confidence. To get the best treatment for it today, book a consultation now.
+Tap Here
+
+--- 
+
+## TREATMENT OF ACNE
+
+Acne can be treated successfully by either topical or oral anti-acne preparations. Some dermatologists also suggest a combination of both therapies. Listed below are some commonly used therapies to guide you about the treatment process:
+
+
+1. **TOPICAL THERAPY**
+    - **Retinoids**, such as retinoic acid, tretinoin, and adapalene, are used either alone or with other topical antibiotics. 
+    - **Antimicrobials**, such asazelaic acid, are helpful in treating normal acne and post-inflammatory pigmentation of acne as well.
+    - **Topical antibiotics**, like clindamycin,azithromycin, and lotion, are effective in treating acne.
+    - **Anti-acne agents**, like salicylic acid, are used as topical gel for seborrheic and comedonal acne. These are also useful in treating pigmentation caused after the healing of acne.
+    Topicalbenzoyl peroxideis taken in combination with adapalene available in the gel base. Topical dapsone is useful in papular and comedogenic acne. Dapsone (aczone) 5% gel is recommended twice daily for inflammatory acne, especially in women. Side effects include redness and dryness.
+    <br>
+
+2. **SYSTEMIC THERAPY**
+    - **Antibiotics**, like doxycycline, help in controlling inflammation and affect the secretion of free fatty acids. Minocyclineis taken in the form of capsules once a day. Sometimes other antibiotics, such as amoxicillin, erythromycin, and sulfamethoxazole, are also used for acne. Ciprofloxacinis used in case of pseudomonas caused acne.
+    - **Oral isotretinoin** (a derivative of vitamin A), like amnesteem or claravis, is used to control sebum production and reduce inflammation. It may be prescribed to people whose moderate or severe acne hasn't responded to other treatments.
+    - **Low-dose estrogenmay** also be prescribed along withcyproterone acetate for treating severe recurrent acne.
+    - **Spironolactoneis** prescribed to males dealing with acne issues. It is helpful in reducing the production of androgens and blocking the actions of testosterone.
+    - **Combined oral contraceptivesare** approved by the FDA for acne therapy in women who also wish to use them for contraception. They are products that combine progestin and estrogen. The benefit of this treatment may not be visible for a few months; therefore, using other acne medications with these for the first few weeks may be helpful.
+
+
+3. **OTHER TREATMENTS**
+    - **Dermabrasion:** In this procedure, the top layer of the skin is removed with the help of a rapidly rotating brush or another device. This helps remove surface scars. It may also reduce the intensity of deeper acne scars.
+    - **Chemical peel:** In this procedure, a chemical solution is applied to the scar tissue to remove the top layer of the skin. This helps in minimizing the appearance of deeper scars.
+    - **Skin needling:** In this procedure, a needle-studded device is rolled over the skin to stimulate collagen formation.
+
+Acne is a painful side effect of oily skin. Here are a few things you could try to improve your skincare game, especially if you have oily skin.
+
+---
+
+## COMPLICATIONS OF ACNE
+
+Acne, when ignored for a long, can become severe and ultimately lead to scar formation. Some common complications include:
+
+1. **Scars:** Pitted skin (acne scars) and thick scars (keloids) can remain for a long time after the acne has healed. Scars left by acne can affect both teenagers and adults. Scars are a result of acne breakouts, penetrating deep into the skin layers. The longer someone has inflammatory acne, the higher it is likely to develop acne scars. Therefore, it is best to seek timely treatment for this condition and prevent the formation of acne scars.
+<br>
+
+2. **Skin changes:** After acne has cleared, the affected skin may be darker (hyperpigmented) or lighter (hypopigmented) than before.
+<br>
+
+3. **Emotional well-being:** Acne can affect more than just skin. It can have a significant impact on one’s emotional well-being. According to studies, acne can lead to low self-esteem, poor self-image, anxiety, depression, decreased quality of life, and feeling alone. Moreover, severe and chronic acne can also take a toll on confidence.
+
+---
+
+## ALTERNATIVE THERAPIES FOR ACNE
+
+#### AYURVEDA
+
+Ayurvedic science believes that acne results from the ventilation of Vata, Pitta, and Kapha doshas in the body. Here is a list of some herbs that can help heal acne faster.
+
+**Turmeric (Haldi):** Turmeric has anti-inflammatory, antibacterial, and antifungal effects, which can help relieve acne problems. Apply a thin paste of turmeric over the affected area after consulting a doctor.
+
+**Honey (Sahed)andLemon (Nimbu):** Honey and lemon have antibacterial properties that could help in healing the acne. However, be careful before applying lemon directly to the face as it may irritate the skin.
+
+**Neem leaves:** Neem offers anti-inflammatory, antibacterial, antifungal, and antiviral activities. It works well against both gram-negative and gram-positive bacteria and hinders the growth of acne-causing bacteria, such as Staphylococcus epidermidis and Propionibacterium acnes (P. acnes). Ground fresh or dried neem leaves into a soft paste by adding water and apply it on the face. Wash it off after 10-15 minutes with warm water.
+
+Pimples can be caused due to various reasons. Read to know the home remedies to get rid of them.
+
+#### HOMEOPATHY
+
+Unlike conventional treatment, homeopathy treatment for acne claims to treat this condition from its root without causing any side effects. Some of the homeopathic medications that are helpful in treating acne are:
+- **Pulsatilla–** This is helpful in treating acne associated with the onset of puberty in teenage girls. It can also help treat acne in pregnant women or those facing acne due to menstruation.
+<br>
+
+- **Silicea–**  It is helpful in treating cystic acne, which appears like boils. Along with this, slow-healing acne and acne which leave pitting scars can be treated with this homeopathic medicine.
+<br>
+
+- **Sulfur–** Sulfur is helpful in treating blackheads and whiteheads, which are not deep and are present over a large area.
+Acne scars not only mar the appearance and reduce confidence, but they are also not very easy to get rid of.Click to readabout some effective natural remedies to help remove acne scars.
+
+Acne scars not only mar the appearance and reduce confidence, but they are also not very easy to get rid of.
+
+---
+
+## HOME-CARE FOR ACNE
+
+Medications, therapies, and treatments can give long-lasting results; however, it is important to take care of your skin at home too. Below mentioned are some tips to follow at home if you have acne:
+
+**Be gentle with your skin:** Use a mild cleanser in the morning and evening. Avoid scrubbing your skin as it can worsen your acne.
+
+**Avoid certain products:** Products such as facial scrubs, astringents, and masks tend to irritate the skin, especially sensitive skin, which can worsen acne. Excessive washing and scrubbing can also irritate the skin.
+
+**Refrain from touching your skin too often:** People who squeeze, pinch, or pick their pimples can get scars or dark spots on their skin.
+
+**Shave carefully:** Men and women both can use this tip while shaving facial hair. Men should soften their beards with some soap and water before applying the shaving cream, and the same applies to women too. Facial hairs are delicate and pre-softening is required before shaving. Shave lightly and only when you have to.
+
+**Avoid over-exposure to the sun:** Many acne medications can make the skin prone to sunburn. Consult a doctor to know more about the reaction of the cream to sun rays.
+
+**Choose your makeup carefully:** Use oil-free makeup. Look for the word “non-comedogenic” on the label. A ‘non-comedogenic’ label means that the product will not clog up the pores.
+
+**Use medications wisely:** If the doctor has recommended any treatment plan for acne, it is important to give the treatment some time to show effective results. If acne treatment works, some improvements might be noticed within 4 to 6 weeks. It might take more than 3 months for the skin to clear up.
+
+**Avoid using different products all at once:** Do not use a new acne product every week as this can irritate the skin and cause fresh breakouts, making it difficult to treat the condition.
+Watch this video to know about natural ways to deal with acne or pimples.
+
+---
+
+## LIVING WITH ACNE
+
+Even though almost everyone suffers from acne, a curable skin condition, in their life, it can still take a toll on one’s emotional well-being. It makes people conscious of their physical appearance, which in turn makes them feel embarrassed and less attractive all the time. This thought process may become a severe issue in teenagers, and may make them miss out on being active in class, taking up sports, and getting a job. 
+
+Instead of feeling anxious or suppressing your feelings, talk about them with your friends or close ones. You can even consult a doctor about its treatment and how to deal with the feelings. Make sure to complete your treatment course and follow the doctor’s advice without fail to fix your acne.
+
+Acne is a completely curable condition but still has a severe impact on one’s mental well-being. Consult India's best doctor's online with a single click.
+
+--- 
+
+### REFERENCES
+
+- National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS). Acne [Internet]. Bethesda, MD: NIAMS; [updated date unknown; cited 2025 Mar 21]. Available from:  (https://www.niams.nih.gov/health-topics/acne#:~:text=Overview%20of%20Acne,commonly%20called%20pimples%20or%20zits)
+- National Health Service (NHS). Acne [Internet]. United Kingdom: NHS; [updated date unknown; cited 2025 Mar 21]. Available from:  (https://www.nhs.uk/conditions/acne/)
+- Fetterolf SE, Huang WW. Acne Vulgaris [Internet]. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2024 [cited 2025 Mar 21]. Available from:  (https://www.ncbi.nlm.nih.gov/books/NBK459173/)
+- American Academy of Dermatology Association (AAD). Acne [Internet]. Rosemont, IL: AAD; [updated date unknown; cited 2025 Mar 21]. Available from:  (https://www.aad.org/public/diseases/acne)
+- American Academy of Dermatology Association (AAD). Skin care tips for acne [Internet]. Rosemont, IL: AAD; [updated date unknown; cited 2025 Mar 21]. Available from:  (https://www.aad.org/public/diseases/acne/skin-care/tips)
