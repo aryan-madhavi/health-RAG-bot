@@ -1,0 +1,28 @@
+// PgSQL Query
+
+create function public.match_documents(
+  filter json,
+  match_count int,
+  query_embedding vector(1536)  -- adjust dimension if needed
+)
+returns table (
+  id uuid,
+  content text,
+  metadata jsonb,
+  similarity float
+)
+language sql
+as $$
+  select
+    id,
+    content,
+    metadata,
+    1 - (embedding <#> query_embedding) as similarity
+  from
+    documents
+  where
+    metadata @> filter::jsonb  -- ✅ FIX: cast filter to jsonb
+  order by
+    embedding <#> query_embedding
+  limit match_count;
+$$;
