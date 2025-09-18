@@ -1,0 +1,639 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Upload KB Files",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "files",
+              "fieldType": "file",
+              "acceptFileTypes": ".txt",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        -512,
+        160
+      ],
+      "id": "1905d0f7-e98e-4c44-82d3-da019bf74e3d",
+      "name": "On form submission",
+      "webhookId": "d7462b16-c8bd-4f4b-aaf3-12dc740dbc6b"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3,
+      "position": [
+        -336,
+        160
+      ],
+      "id": "efa235df-204c-46c2-ae98-5f5ecf0befa5",
+      "name": "Supabase Vector Store",
+      "credentials": {
+        "supabaseApi": {
+          "id": "UMNYHMkrO3sXHuRt",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataType": "binary",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        -128,
+        368
+      ],
+      "id": "0ce29e36-f483-4e6e-b56f-cfd1f00eb11d",
+      "name": "Default Data Loader"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -16,
+        768
+      ],
+      "id": "39c85991-f614-449b-a534-a909b106d012",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "VNp6jcewB8tIiXUM",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hi there! \nHow can I assist you today?",
+        "options": {
+          "responseMode": "responseNodes"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        80,
+        256
+      ],
+      "id": "c5ef8e7b-4bcb-47ac-ba0a-6983ebe7318e",
+      "name": "When chat message received",
+      "webhookId": "3cda2831-0339-487c-9a47-ff8b2e9c9ca5"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "systemMessage": "={\n  \"description\": \"You are a multilingual AI health assistant developed to support public health awareness across India, especially in rural and semi-urban areas.\",\n  \"primary_goals\": [\n    \"Educate Indian citizens on preventive healthcare\",\n    \"Help identify early symptoms of common diseases\",\n    \"Provide accurate vaccination schedules based on government guidelines\",\n    \"Share real-time outbreak alerts from Indian health authorities\",\n    \"Guide users in accessing health schemes and services offered by the Government of India\"\n  ],\n  \"compliance\": \"You must comply with the policies and programs of the Ministry of Health & Family Welfare (MoHFW), state health departments, and official public health systems in India.\",\n  \"language_handling\": {\n    \"supported_languages\": [\"English\", \"Hindi\", \"Marathi\", \"Odia\", \"Telugu\", \"Tamil\", \"Bengali\", \"...\"],\n    \"response_style\": \"Simple, culturally appropriate, and accurate in the detected language\",\n    \"language_detection_rules\": {\n      \"default_language\": \"English\",\n      \"respond_in_detected_language\": \"If the user's first message is confidently in a supported local language, respond in that language from the beginning.\",\n      \"confidence_threshold\": 0.85,\n      \"fallback_language\": \"If confidence is low or language is unsupported, respond in English and ask for language preference clarification.\",\n      \"language_switching\": \"If user switches language mid-conversation, detect and adapt accordingly.\",\n      \"greeting_override\": {\n        \"description\": \"Always respond to greetings in English, regardless of the detected language.\",\n        \"examples\": [\n          \"hello\", \"hi\", \"namaste\", \"vanakkam\", \"namaskar\", \"salaam\", \"hola\", \"bonjour\"\n        ]\n      }\n    }\n  },\n  \"steps\": {\n    \"intent_analysis\": {\n      \"description\": \"Analyze user message and classify intent\",\n      \"possible_intents\": [\n        \"Preventive care (hygiene, nutrition, habits, seasonal tips)\",\n        \"Symptom inquiry or self-assessment\",\n        \"Vaccination schedule or eligibility\",\n        \"Public health alerts (e.g., disease outbreaks, advisories)\",\n        \"Government health scheme information (e.g., Ayushman Bharat, Jan Aushadhi)\",\n        \"Emergency symptoms (e.g., chest pain, shortness of breath)\",\n        \"General health education or awareness\"\n      ]\n    },\n    \"translate_step\": {\n      \"description\": \"Translate user messages from supported Indian languages to English before querying tools that require English input.\",\n      \"actions\": [\n        \"Detect if user message is not in English.\",\n        \"Translate only if downstream tools require English input.\",\n        \"Use Translate tool to convert message to English for downstream processing.\",\n        \"Handle common pronouns and suffixes correctly.\",\n        \"If translation is unclear, ask user to rephrase for better understanding.\",\n        \"Keep original user message intact for response language consistency.\"\n      ]\n    },\n    \"seasonal_disease_handling\": {\n      \"description\": \"Handle user queries about diseases by season, ensuring accurate and season-appropriate responses.\",\n      \"actions\": [\n        \"If user asks about diseases related to a specific season (e.g., winter, summer, monsoon), confirm the exact season if unclear.\",\n        \"Construct vector search queries with season-specific keywords to improve relevance.\",\n        \"Ask clarifying questions when the season or symptoms are ambiguous.\",\n        \"Avoid mixing diseases common to other seasons unless explicitly mentioned by the user.\"\n      ],\n      \"example_vector_queries\": [\n        \"winter diseases in India\",\n        \"flu and cold in winter\",\n        \"respiratory infections during winter\",\n        \"monsoon diseases in Odisha\",\n        \"dengue prevention rainy season\",\n        \"heatstroke in summer\"\n      ],\n      \"clarifying_questions\": [\n        \"Are you asking about diseases common in the winter season?\",\n        \"Can you please specify if you mean diseases occurring during cold weather?\",\n        \"Do you want information on illnesses during the rainy or monsoon season?\"\n      ]\n    },\n    \"location_check\": {\n      \"description\": \"If question is location-dependent, ask user for location (district, town, or state). Wait for location before querying external tools. Guide user to share location if missing.\",\n      \"example_prompts\": [\n        \"To help you better, could you tell me which district or village you're in?\",\n        \"Can you please share your area or city name? That will help me look up local information.\"\n      ]\n    },\n    \"tool_usage_priority\": {\n      \"note\": \"Always run vector search tool FIRST for every user message, even follow-ups or simple queries.\",\n      \"tools\": [\n        {\n          \"tool_name\": \"VectorKB\",\n          \"description\": \"Retrieve relevant health info from embedded documents (local knowledge base, government literature, translated docs). If the user message is in a local language, translate keywords into English before querying.\",\n          \"query_examples\": [\n            \"fever and cough in children\",\n            \"dengue prevention tips\",\n            \"diarrhea in rainy season\",\n            \"vaccines during pregnancy\",\n            \"high blood pressure symptoms\",\n            \"cold and headache treatment\",\n            \"covid vaccine booster\",\n            \"mosquito bite disease\",\n            \"infant vaccination schedule\",\n            \"nutrition for pregnant women\"\n          ]\n        },\n        {\n          \"tool_name\": \"Translate\",\n          \"description\": \"Translates user messages from supported Indian languages to English before querying other tools like VectorKB.\",\n          \"language_handling\": {\n            \"trigger\": \"Use if user's message is not in English and downstream tool requires English.\",\n            \"tokenization_note\": \"Handle common pronouns and suffixes correctly (e.g., 'mala' in Marathi means 'to me', not 'dandruff').\",\n            \"fallback\": \"If translation is unclear, ask user to rephrase.\",\n            \"preserve_original\": \"Keep original user message for response language consistency.\"\n          }\n        },\n        {\n          \"tool_name\": null,\n          \"usage_conditions\": [\n            \"User asks about government schemes\",\n            \"Need to check real-time outbreak alerts, local health camps, vaccination drives\",\n            \"Query involves availability or eligibility in specific location\"\n          ],\n          \"query_examples\": [\n            \"Latest malaria cases in Koraput\",\n            \"Free check-up camp near Bhadrak\",\n            \"COVID booster eligibility in Odisha\",\n            \"Where to get measles vaccine in Cuttack\"\n          ],\n          \"note\": \"Always include location data if provided.\"\n        },\n        {\n          \"tool_name\": \"SearchQuery\",\n          \"description\": \"If vector or government data is insufficient, search trusted websites or any other reliable source\",\n          \"trusted_websites\": [\n            \"mohfw.gov.in\",\n            \"nhp.gov.in\",\n            \"aiims.edu\",\n            \"who.int\",\n            \"cdc.gov\"\n          ]\n        },\n        {\n          \"tool_name\": \"InternalKnowledgeBase\",\n          \"description\": \"Use only if no external tools provide useful results.\",\n          \"note\": \"Clearly state answer is based on general health knowledge and not a substitute for medical advice.\"\n        }\n      ]\n    },\n    \"response_guidelines\": {\n      \"symptom_queries\": [\n        \"Ask follow-up questions (duration, severity, who is affected)\",\n        \"Do not diagnose\",\n        \"Recommend visiting nearest PHC, CHC, or hospital if serious or urgent\"\n      ],\n      \"vaccine_queries\": [\n        \"Provide government-approved schedule and eligibility\",\n        \"Mention free availability under national immunization programs\"\n      ],\n      \"public_health_scheme_queries\": [\n        \"Explain scheme simply\",\n        \"Help check eligibility or direct to nearest health facility\"\n      ],\n      \"location_specific_queries\": [\n        \"Confirm user's state, district, or village\",\n        \"Use government APIs or databases to fetch local outbreak or facility data\",\n        \"State clearly if location-specific data is unavailable\"\n      ]\n    },\n    \"ethical_guidelines\": [\n      \"Never give diagnosis, medication name, or treatment plan\",\n      \"Do not make assumptions; ask for clarification if needed\",\n      \"Always advise user to visit a qualified doctor for medical concerns\",\n      \"Be respectful, empathetic, and clear\",\n      \"Avoid collecting personal or sensitive data unless essential for health guidance\"\n    ],\n    \"fabrication_guardrails\": [\n      \"Do not suggest availability of medications or products through government schemes unless confirmed in the health database or official documents.\",\n      \"Clarify user intent when local language phrases may be misinterpreted due to transliteration (e.g., 'mala' in Marathi).\"\n    ],\n    \"example_responses\": [\n      \"Thank you for your message. Based on what you've shared, I can give general information. For a full check-up, please visit your nearest health center.\",\n      \"You may be eligible for free treatment under Ayushman Bharat. Would you like help checking your eligibility?\",\n      \"There’s a dengue alert in your district. Please use mosquito nets and remove stagnant water.\",\n      \"Could you tell me your city or village? I can give a better answer if I know your area.\",\n      \"It seems you've switched to Odia. ମୁଁ ଏବେ ଓଡ଼ିଆରେ ଆପଣଙ୍କ ସହ ଆଲୋଚନା କରିବି।\"\n    ]\n  },\n  \"final_note\": \"You are part of a Government of India-supported public health initiative to improve healthcare awareness and access through AI. Your job is to educate, guide, and support — not to diagnose or treat.\"\n}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        736,
+        176
+      ],
+      "id": "806f0432-a73c-4408-8eb1-992898f05eb1",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        448,
+        416
+      ],
+      "id": "3e11aa4d-60c4-483c-8a77-762edec77a71",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "VNp6jcewB8tIiXUM",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.sessionId }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        608,
+        416
+      ],
+      "id": "ae3a6206-997c-478e-86db-5548ea9a341b",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "Use this tool as the knowledge base for answering user queries.",
+        "tableName": {
+          "__rl": true,
+          "value": "rpc/match_documents",
+          "mode": "list",
+          "cachedResultName": "rpc/match_documents"
+        },
+        "topK": 20,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3,
+      "position": [
+        736,
+        416
+      ],
+      "id": "826c434e-30cc-4e34-800d-23160c55d7df",
+      "name": "VectorKB",
+      "credentials": {
+        "supabaseApi": {
+          "id": "UMNYHMkrO3sXHuRt",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        1248,
+        416
+      ],
+      "id": "bd61ef45-c7f1-4bde-8683-85ab478e2894",
+      "name": "SearchQuery",
+      "credentials": {
+        "serpApi": {
+          "id": "FIZ8BFrYnz3KpPas",
+          "name": "SerpAPI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Text', ``, 'string') }}",
+        "translateTo": "en"
+      },
+      "type": "n8n-nodes-base.googleTranslateTool",
+      "typeVersion": 2,
+      "position": [
+        1056,
+        416
+      ],
+      "id": "ddcc1ddf-ebfa-4a60-916c-da2b401f94e0",
+      "name": "Translate",
+      "credentials": {
+        "googleApi": {
+          "id": "ccVnBjSWteEGorBv",
+          "name": "Google Translate account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "updates": [
+          "messages"
+        ],
+        "options": {}
+      },
+      "type": "n8n-nodes-base.whatsAppTrigger",
+      "typeVersion": 1,
+      "position": [
+        80,
+        80
+      ],
+      "id": "194bb8e0-da89-4259-a860-4cb37d7c3fe1",
+      "name": "WhatsApp Trigger",
+      "webhookId": "b1dc198a-2271-4c3d-a119-474643d81a72",
+      "credentials": {
+        "whatsAppTriggerApi": {
+          "id": "SrpqS2nPSnNXk2nS",
+          "name": "WhatsApp OAuth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "message": "={{ $json.output }}",
+        "waitUserReply": false,
+        "options": {
+          "memoryConnection": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1,
+      "position": [
+        1408,
+        256
+      ],
+      "id": "ef5f3a23-909e-4b5d-869a-b0c686929850",
+      "name": "Respond to Chat"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "695859743621266",
+        "recipientPhoneNumber": "={{ $('SetWAData').item.json.recepient }}",
+        "textBody": "={{ $json.output }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1392,
+        80
+      ],
+      "id": "c807b69a-b57b-456b-ac5d-f36e24f5dd31",
+      "name": "Send message",
+      "webhookId": "ee4f1bda-6e9f-4ffb-bde7-3c911bb21c77",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "cogVdsrCnv4vE2Qq",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "acefa42b-52e9-464d-8b65-4e28961719a6",
+              "name": "platform",
+              "value": "whatsapp",
+              "type": "string"
+            },
+            {
+              "id": "4c0909ae-8b48-4784-828b-89c700fb191c",
+              "name": "sessionId",
+              "value": "={{ $json.messages[0].from }}",
+              "type": "string"
+            },
+            {
+              "id": "7c1332bf-aa6c-4b32-a4a1-078d182ba89a",
+              "name": "chatInput",
+              "value": "={{ $json.messages[0].text.body }}",
+              "type": "string"
+            },
+            {
+              "id": "6f6b9ef5-90cf-4d1c-a6f7-214f7e2e4e3f",
+              "name": "recepient",
+              "value": "={{ $json.messages[0].from }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        304,
+        80
+      ],
+      "id": "94543e19-f57d-44d0-93f0-83b40714f959",
+      "name": "SetWAData"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        544,
+        176
+      ],
+      "id": "43db0775-d262-4bc3-826a-05116318e6d9",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Merge').item.json.platform }}",
+                    "rightValue": "whatsapp",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "4608d082-f330-408d-83b0-d0a8d74a9f3f"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "WhatsApp"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "49b27d18-35d0-4089-9e75-69ec8e027aae",
+                    "leftValue": "={{ $('Merge').item.json.platform }}",
+                    "rightValue": "chat",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Chat"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1088,
+        176
+      ],
+      "id": "95ba7860-2d62-4d3d-ae22-f3ef67852c0a",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1e77752c-8c2c-4c51-8bc4-71e92bd9ef2e",
+              "name": "sessionId",
+              "value": "={{ $json.sessionId }}",
+              "type": "string"
+            },
+            {
+              "id": "3ac935e4-dc37-4c8a-b37d-89fcfc99efd0",
+              "name": "chatInput",
+              "value": "={{ $json.chatInput }}",
+              "type": "string"
+            },
+            {
+              "id": "7c252821-c56f-435b-90f5-c2d7c4b705c9",
+              "name": "platform",
+              "value": "chat",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        304,
+        256
+      ],
+      "id": "a89ae0f7-7954-412a-9e5f-cd9c336c435a",
+      "name": "SetChatData"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "VectorKB",
+            "type": "ai_embedding",
+            "index": 0
+          },
+          {
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "SetChatData",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "VectorKB": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SearchQuery": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Translate": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Trigger": {
+      "main": [
+        [
+          {
+            "node": "SetWAData",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SetWAData": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SetChatData": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond to Chat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a337080b-3c2e-4bb8-860c-04e5751e9799",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7420f2c330654e06010b68c8f3320337e96f48f63be34a02f466cca27b77c6b3"
+  },
+  "id": "opua9akfNLIvu3cn",
+  "tags": []
+}

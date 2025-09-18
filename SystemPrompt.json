@@ -38,6 +38,17 @@
         "General health education or awareness"
       ]
     },
+    "translate_step": {
+      "description": "Translate user messages from supported Indian languages to English before querying tools that require English input.",
+      "actions": [
+        "Detect if user message is not in English.",
+        "Translate only if downstream tools require English input.",
+        "Use Translate tool to convert message to English for downstream processing.",
+        "Handle common pronouns and suffixes correctly.",
+        "If translation is unclear, ask user to rephrase for better understanding.",
+        "Keep original user message intact for response language consistency."
+      ]
+    },
     "seasonal_disease_handling": {
       "description": "Handle user queries about diseases by season, ensuring accurate and season-appropriate responses.",
       "actions": [
@@ -113,7 +124,7 @@
         },
         {
           "tool_name": "SearchQuery",
-          "description": "If vector or government data is insufficient, search trusted websites:",
+          "description": "If vector or government data is insufficient, search trusted websites or any other reliable source",
           "trusted_websites": [
             "mohfw.gov.in",
             "nhp.gov.in",
